@@ -3,7 +3,37 @@
   margin-right: auto;
   width: 650px;
 }
-
+body{
+    background-color: lightgray;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+a{
+    border: black
+    
+}
+p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: : 30px;
+    text-align: left;
+    color: black;
+}
+li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25 px;
+    color: black;
+}
+.img-me{
+    width: 300px;
+}
 #greeting-container {
   margin-top: 20px;
 }
