@@ -15,11 +15,11 @@
 /**
  * Fetches a random quote from the server and adds it to the DOM.
  */
-function getRandomQuote() {
-  console.log('Fetching a random quote.');
+function getdataservlet() {
+  console.log('Fetching data servlet.');
 
   // The fetch() function returns a Promise because the request is asynchronous.
-  const responsePromise = fetch('/random-quote');
+  const responsePromise = fetch('/data');
 
   // When the request is complete, pass the response into handleResponse().
   responsePromise.then(handleResponse);
@@ -31,7 +31,6 @@ function getRandomQuote() {
  */
 function handleResponse(response) {
   console.log('Handling the response.');
-
   // response.text() returns a Promise, because the response is a stream of
   // content and not a simple variable.
   const textPromise = response.text();
@@ -42,10 +41,10 @@ function handleResponse(response) {
 }
 
 /** Adds a random quote to the DOM. */
-function addQuoteToDom(quote) {
-  console.log('Adding quote to dom: ' + quote);
+function addServletToDom(servlet) {
+  console.log('Adding data to dom: ' + quote);
 
-  const quoteContainer = document.getElementById('quote-container');
+  const quoteContainer = document.getElementById('dataservlet-container');
   quoteContainer.innerText = quote;
 }
 
@@ -56,8 +55,8 @@ function addQuoteToDom(quote) {
  * whichever syntax makes the most sense to you.
  */
 function getRandomQuoteUsingArrowFunctions() {
-  fetch('/random-quote').then(response => response.text()).then((quote) => {
-    document.getElementById('quote-container').innerText = quote;
+  fetch('/data').then(response => response.text()).then((response) => {
+    document.getElementById('response-container').innerText = response;
   });
 }
 
@@ -71,3 +70,4 @@ async function getRandomQuoteUsingAsyncAwait() {
   const quote = await response.text();
   document.getElementById('quote-container').innerText = quote;
 }
+

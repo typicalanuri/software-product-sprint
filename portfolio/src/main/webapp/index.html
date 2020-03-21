@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="getComments()">
     <div id="content">
-      <h1> @T Y P I C A L  A N U R I </h1>
+      <h1> @J E S S N W A C H U K W U </h1>
       <p>Learn more about me on this page!</p>
        &nbsp; &nbsp; &nbsp;
        <img class="img-me" src="images/FullSizeRender.jpg" alt="my picture">
@@ -17,17 +17,28 @@
              <h2> Fun Facts About Me: </h2>
              <ul>
                  <li> I was born in Sarawak, Malaysia in 2000 </li>
-                 <li> My Middle name, Anurichukwuka, is longer than my last name </li>
+                 <li> My Middle name is longer than my last name </li>
                  <li> I love working out at the gym </li>
                  <li> I want to live in Europe in my mid 20's, preferably in Denmark or Sweden </li> 
              </ul>
        <!--<img class="img-me" scr="images/IMG" -->
       <a href="https://www.linkedin.com/in/jessicanwachukwu">Linkedin Page </a>
-      <p>           </p>
+      &nbsp; &nbsp;
       <a href="https://github.com/typicalanuri">GitHub Page </a>
       <p>Click through my favorite foods below</p>
       <button onclick="addRandomGreeting()">My favorite foods</button>
       <div id="greeting-container"></div>
     </div>
+    <div id="content">
+      <button onclick="getdataservlet()">Fetch a quote!</button>
+      <div id="data-container"></div>
+    </div>
+    <form action="/data" method="POST">
+
+      <p>Enter a comment: </p>
+      <textarea name="text-input"> </textarea>
+      <br/><br/>
+      <input type="submit" />
+    </form>
   </body>
 </html>
